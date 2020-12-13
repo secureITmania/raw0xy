@@ -100,9 +100,9 @@ hostname=request_head[get_index[0]].split(" ")[1]+":443"
 # print(host)
 url="https://"+hostname+query
 
-if method=='POST':
+if len(a) == 2:
 	body=a[1].encode('utf-8')
-	print(type(body))
+	#print(type(body))
 
 raw_headers=requestHeaders(request_head,get_index[0])
 #print(raw_headers)
