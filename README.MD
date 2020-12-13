@@ -4,7 +4,7 @@ In the recent android application testing, I encountered a challenge to import r
 
 raw0xy is a python tool that parse the raw request and sends appropriate request via defined proxy.
 
-![](E:\Python\raw0xy\Images\tool_banner.png)
+![](https://raw.githubusercontent.com/secureITmania/raw0xy/main/Images/tool_banner.png)
 
 
 
