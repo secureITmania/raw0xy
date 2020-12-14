@@ -102,6 +102,8 @@ url="https://"+hostname+query
 
 if len(a) == 2:
 	body=a[1].encode('utf-8')
+if len(a) == 1 and method != 'GET':
+	body=""
 	#print(type(body))
 
 raw_headers=requestHeaders(request_head,get_index[0])
