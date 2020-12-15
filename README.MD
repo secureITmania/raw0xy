@@ -6,7 +6,9 @@ raw0xy is a python tool that parse the raw request and sends appropriate request
 
 ![](https://raw.githubusercontent.com/secureITmania/raw0xy/main/Images/tool_banner.png)
 
-
+```
+pip install -r requirements.txt
+```
 
 ```cmd
 usage:
