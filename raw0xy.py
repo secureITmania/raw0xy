@@ -73,6 +73,11 @@ def requestHeaders(request_head_list, host_header_index):
 	host_header_index=host_header_index-1
 	del request_head_list[host_header_index]
 	return request_head_list
+def combine_elements(a_list):
+	length=len(a_list)
+	raw_body=a_list[1:length]
+	body="\r\n\r\n".join(raw_body)
+	return body
 
 try:
 	file=sys.argv[1]
@@ -102,8 +107,11 @@ url="https://"+hostname+query
 
 if len(a) == 2:
 	body=a[1].encode('utf-8')
-if len(a) == 1 and method != 'GET':
+elif len(a) == 1 and method != 'GET':
 	body=""
+elif len(a) > 2:
+	body=combine_elements(a)
+	#print(body)
 	#print(type(body))
 
 raw_headers=requestHeaders(request_head,get_index[0])
