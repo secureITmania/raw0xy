@@ -98,7 +98,7 @@ request_head=a[0].splitlines()
 #print(request_head)
 method=request_head[0].split()[0]
 query=request_head[0].split()[1]
-get_index=[i for i, word in enumerate(request_head) if word.startswith('Host:')]
+get_index=[i for i, word in enumerate(request_head) if word.startswith(('Host:','host:'))]
 hostname=request_head[get_index[0]].split(" ")[1]+":443"
 # print(method)
 # print(query)
